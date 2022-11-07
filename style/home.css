@@ -244,6 +244,10 @@
     height: 100%;
     object-fit: cover;
   }
+  section .content-list .slider .item img:hover {
+    border: 3px solid white;
+
+  }
   section .content-list .prev-arrow {
     transform: rotateY(180deg);
   }

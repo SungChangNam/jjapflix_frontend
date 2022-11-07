@@ -1,7 +1,9 @@
 window.onload = async function loadMovieRefresh(){
 
     let User_payload = JSON.parse(localStorage.getItem('payload'))
+
     		if (User_payload === undefined ||  User_payload === null){
+
 
 
 

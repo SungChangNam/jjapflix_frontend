@@ -28,7 +28,7 @@
                     <a href="#">영화</a>
                 </li>
                 <li>
-                    <a href="#">NEW! 요즘 대세 콘텐츠</a>
+                    <a onclick="location.replace('refresh.html')">콘텐츠 고르기</a>
                 </li>
                 <li>
                     <a href="#">내가 찜한 콘텐츠</a>
@@ -39,14 +39,15 @@
             <form>
                 <div class="icon search">
                     <div class="search-bar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        
                         <input id="search" type="text" placeholder="제목, 내용, 장르"/>
-                        <button type="button" onclick="searchButton()">검색</button>
+                        <i style="cursor: pointer;" class="fa-solid fa-magnifying-glass" onclick="searchButton()"></i>
                     </div>
                 </div>
             </form>
             <div class="icon kids">
-                <a href="#">키즈</a>
+                <a style="cursor: pointer;" onclick="handleLogout()">로그아웃</a>
+                <a style="cursor: pointer;" onclick="handleDelete()">회원탈퇴</a>
             </div>
             <div class="icon bell">
                 <a href="#"><i class="fa-solid fa-bell"></i></a>
@@ -77,22 +78,22 @@
     </main>
     <section>
         <div class="content-list">
-            <h1> 콘텐츠</h1>
+            <h1>관심있는 콘텐츠</h1>
             <div class="slider" id="movies">
             </div>
             <div class="prev"><i class="fa-solid fa-angle-right prev-arrow"></i></div>
             <div class="next"><i class="fa-solid fa-angle-right"></i></div>
         </div>
         <div class="content-list">
-            <h1>지금 뜨는 콘텐츠</h1>
-            <div class="slider">
+            <h1>인기있는 콘텐츠</h1>
+            <div class="slider" id="category_1">
             </div>
             <div class="prev"><i class="fa-solid fa-angle-right prev-arrow"></i></div>
             <div class="next"><i class="fa-solid fa-angle-right"></i></div>
         </div>
         <div class="content-list">
-            <h1>오늘 한국의 TOP 10 콘텐츠</h1>
-            <div class="slider">
+            <h1>재미있는 콘텐츠</h1>
+            <div class="slider" id="category_2">
             </div>
             <div class="prev"><i class="fa-solid fa-angle-right prev-arrow"></i></div>
             <div class="next"><i class="fa-solid fa-angle-right"></i></div>
@@ -124,11 +125,6 @@
         </div>
     </footer>
 
-    <h1>홈페이지</h1>
-    <form>
-    <input type="text" id="search" placeholder="Type to Search">
-    <button type="button" onclick="searchButton()">검색</button>
-    </form> 
     <script src="js/api.js"></script>
     <script src="js/home.js"></script>
 

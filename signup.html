@@ -7,17 +7,20 @@
   <title>CodeWithAnonymous - Netflix Login Page (Desktop)</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" type="image/png" sizes="16x16"  href="/img/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
   <script src="js/api.js"></script>
   <ol id="article"></ol>
 
 </head>
 <body>
-  <a class="logo" href="https://www.netflix.com/" target="_blank"><img src="https://bit.ly/2VdIFUK"/></a>
+  <a class="logo" href="http://127.0.0.1:5500/" target="_blank"><img src="https://bit.ly/2VdIFUK"/></a>
   <section>
 <!-- partial:index.partial.html -->
 
 <div class="login">
-  <h1 class="login__title">Sign up</h1>
+  <h1 class="login__title">회원가입</h1>
   <div class="login__group">
     <input class="login__group__input" type="text" required="true" id="email" placeholder="email" />
     <label class="login__group__label"></label>
@@ -34,8 +37,8 @@
     <input class="login__group__input" type="password" required="true" id="password2" placeholder="password2" />
     <label class="login__group__label"></label>
   </div>
-  <button class="login__sign-in" type="button" onclick="handleSignup()">Sign up</button> 
-  <div class="login__secondary-cta"><a class="login__secondary-cta__text login__secondary-cta__text--need-help" href="#">Need help?</a></div>
+  <button class="login__sign-in" type="button" onclick="handleSignup()">회원가입</button> 
+  <div class="login__secondary-cta"></div>
 </div>
 
 <!-- partial -->

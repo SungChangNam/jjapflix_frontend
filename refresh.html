@@ -2,6 +2,7 @@
 <html lang="kr">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,6 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/home.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16"  href="/img/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+    <title>JJapFlix</title>
 </head>
 <body>
 
@@ -60,14 +67,14 @@
     </nav>
     <section>
         <div class="content-list">
-            <h1> 콘텐츠</h1>
+            <h1>관심있는 콘텐츠를 골라주세요!</h1>
             <div class="slider" id="movies">
             </div>
             <div class="prev"><i class="fa-solid fa-angle-right prev-arrow"></i></div>
             <div class="next"><i class="fa-solid fa-angle-right"></i></div>
         </div>
-        <div class="age-info">
-            <i class="fa-solid fa-rotate-right"><button>새로고침</button></i>
+        <div class="age-info" style="text-align: center;">
+            <button onclick="location.replace('refresh.html')"><i class="fa-solid fa-rotate-right" style="color: black;"></i></button>
         </div>
     </section>
     <footer>

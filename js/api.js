@@ -1,6 +1,7 @@
 const frontEndBaseUrl = "http://127.0.0.1:5500"
 const backEndBaseUrl = "http://127.0.0.1:8000"
 const TmdbApiImageUrl = "https://www.themoviedb.org/t/p/w220_and_h330_face"
+const TmdbApiImageOgUrl = "https://www.themoviedb.org/t/p/original/"
 
 window.onload = () => {
     console.log('로딩되었음')
@@ -35,7 +36,6 @@ async function handleSignup() {
     }else {
         alert(response_json["email"])
         alert(response_json["password1"])
-        alert(response_json["password2"])
 
     }
 }
@@ -218,4 +218,67 @@ async function getMovieSearch(search_id){
     return response_json
     
 
+}
+
+
+async function getMovieCategoryOne(){
+    const category_id_name = [
+        {"id":"12", "name":"모험"},
+        {"id":"14", "name":"판타지"},
+        {"id":"16", "name":"애니메이션"},
+        {"id":"18", "name":"드라마"},
+        {"id":"27", "name":"공포"},
+        {"id":"28", "name":"액션"},
+        {"id":"35", "name":"코미디"},
+        {"id":"36", "name":"역사"},
+        {"id":"37", "name":"서부"},
+        {"id":"53", "name":"스릴러"},
+        {"id":"80", "name":"범죄"},
+        {"id":"99", "name":"다큐멘터리"},
+        {"id":"878", "name":"SF"},
+        {"id":"9648", "name":"미스터리"},
+        {"id":"10402", "name":"음악"},
+        {"id":"10749", "name":"로맨스"},
+        {"id":"10751", "name":"가족"},
+        {"id":"10752", "name":"전쟁"},
+        {"id":"10770", "name":"TV 영화"}
+    ]
+    const randomValue = category_id_name[Math.floor(Math.random() * category_id_name.length)];
+    const response = await fetch(`${backEndBaseUrl}/articles/category/${randomValue.id}`,{
+        method:'GET',
+    })
+    
+    response_json = await response.json()
+    return response_json
+}
+
+async function getMovieCategoryTwo(){
+    const category_id_name = [
+        {"id":"12", "name":"모험"},
+        {"id":"14", "name":"판타지"},
+        {"id":"16", "name":"애니메이션"},
+        {"id":"18", "name":"드라마"},
+        {"id":"27", "name":"공포"},
+        {"id":"28", "name":"액션"},
+        {"id":"35", "name":"코미디"},
+        {"id":"36", "name":"역사"},
+        {"id":"37", "name":"서부"},
+        {"id":"53", "name":"스릴러"},
+        {"id":"80", "name":"범죄"},
+        {"id":"99", "name":"다큐멘터리"},
+        {"id":"878", "name":"SF"},
+        {"id":"9648", "name":"미스터리"},
+        {"id":"10402", "name":"음악"},
+        {"id":"10749", "name":"로맨스"},
+        {"id":"10751", "name":"가족"},
+        {"id":"10752", "name":"전쟁"},
+        {"id":"10770", "name":"TV 영화"}
+    ]
+    const randomValue = category_id_name[Math.floor(Math.random() * category_id_name.length)];
+    const response = await fetch(`${backEndBaseUrl}/articles/category/${randomValue.id}`,{
+        method:'GET',
+    })
+    
+    response_json = await response.json()
+    return response_json
 }
