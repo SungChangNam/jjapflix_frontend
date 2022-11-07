@@ -4,30 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="style/article.css">
     <title>게시글상세보기</title>
 </head>
 <body>
-    <section>
-    <center>
-    <div class="main_pic">
-
-    <h1 class="main_titile">게시글상세보기 페이지</h1>
-    <div class="detail_pic"><ol id="article"></ol> </div>
-
+    <h1>게시글상세보기 페이지</h1>
+    <ol id="article"></ol>
     <br>
-    <div>
-    <ol id ="comment" class="comment_detail"></ol>
-
+    <ol id ="comment"></ol>
     <form>
         <input type="text" name="content" id="content" placeholder="리뷰내용" />
         <input type="text" name="rating" id="rating" placeholder="평점" />
         <button id="btn_submit" type="button">제출</button>
     </form>
-</center>
-
-</section>
     <script src="js/api.js"></script>
     <script src="js/articledetail.js"></script>
 </body>
